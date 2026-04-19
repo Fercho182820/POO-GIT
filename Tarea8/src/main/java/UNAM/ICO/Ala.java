@@ -14,6 +14,10 @@ public class Ala implements Tacleador, Recuperador {
         return nombre;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     @Override
     public String toString() {
         return "Ala{" +
@@ -21,17 +25,16 @@ public class Ala implements Tacleador, Recuperador {
                 '}';
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     @Override
     public void realizarTacle() {
+        System.out.println("El Ala " + nombre + " mete un tacle ofensivo y manda al rival hacia atras. ");
 
     }
 
     @Override
     public void pescarBalon() {
+        System.out.println(nombre + " llega primero al ruck, pone las manos en el balón");
 
     }
 }
