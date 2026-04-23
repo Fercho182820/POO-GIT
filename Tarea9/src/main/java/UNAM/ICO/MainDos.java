@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class MainDos {
     static void main() {
 
         CalculadoraIMC calculadoraIMC = new CalculadoraIMC();
@@ -18,20 +18,11 @@ public class Main {
             System.out.println("Ingrese su altura: ");
             calculadoraIMC.setAltura(teclado.nextDouble());
             calculadoraIMC.calcularIMC();
-            Integer numero = new Integer(10);
-            numero = null;
-            System.out.println(numero.byteValue());
 
         }catch (InputMismatchException e){
             System.out.println("Error revisa tu entrada");
-            System.out.println(e.getMessage());
-        }catch (NullPointerException e){
-            System.out.println("Objeto nulo Revisa tu entrada");
-            System.out.println(e.getMessage());
-        }catch (Exception e){
-            System.out.println("Error desconocido");
-            System.out.println(e.getMessage());
         }
+
         System.out.println("Su IMC es: "+ calculadoraIMC.getImc());
 
 
