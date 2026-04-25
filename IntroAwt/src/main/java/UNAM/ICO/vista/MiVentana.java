@@ -27,17 +27,20 @@ public class MiVentana extends Frame {
         boton1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                double grados = Double.parseDouble(entrada.getText);
-                double farenheit = (grados * 9 / 5) + 32;
-                resultado.setText();
+                //double grados = Double.parseDouble(entrada.getText);
+                //double farenheit = (grados * 9 / 5) + 32;
+                //resultado.setText();
             }
         });
         boton1.addMouseListener(new EventosRaton());
         boton2 = new Button("Hola");
         add(label);
-        add(entrada);
+        //add(entrada);
         add(boton1);
         add(boton2);
+        add(label);
+        add(text);
+
 
         addWindowListener(new EventosVentana());
 
