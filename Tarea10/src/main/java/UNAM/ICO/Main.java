@@ -1,17 +1,18 @@
 package UNAM.ICO;
 
+import UNAM.ICO.Border.VentanaBorder;
+import UNAM.ICO.Flow.VentanaFlow;
+import UNAM.ICO.Grind.VentanaGrind;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        //VentanaFlow ventanaFlow = new VentanaFlow("Terry",800,600);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        //VentanaBorder ventanaBorder = new VentanaBorder("Ari",800,600);
+
+        VentanaGrind ventanaGrind = new VentanaGrind("Alim", 800, 600);
     }
+
 }
