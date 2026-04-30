@@ -2,6 +2,7 @@ package UNAM.ICO.PrimerEjemplo;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class VentanaDos extends JFrame {
     private GridLayout layout;
@@ -28,11 +29,19 @@ public class VentanaDos extends JFrame {
         panel4 = new JPanel();
         combo = new JComboBox<>();
 
+        ArrayList<String> nombres = new ArrayList<>();
+        nombres.add("Ari");
+        nombres.add("Alde");
+        nombres.add("Alex");
+        nombres.add("Angel");
+        ModeloComboNombres modelo = new ModeloComboNombres(nombres);
+        combo.setModel(modelo);
 
-        panel1.setBackground(new Color(22,32,104));
-        panel2.setBackground(new Color(0,0,0));
-        panel3.setBackground(new Color(34,55,78));
-        panel4.setBackground(new Color(55,33,88));
+
+        panel1.setBackground(new Color(255, 250, 240));
+        panel2.setBackground(new Color(255, 248, 220));
+        panel3.setBackground(new Color(255, 248, 220));
+        panel4.setBackground(new Color(255, 250, 240));
 
         etiqueta = new JLabel("Soy una etiqueta");
         boton = new JButton("Soy un boton");
