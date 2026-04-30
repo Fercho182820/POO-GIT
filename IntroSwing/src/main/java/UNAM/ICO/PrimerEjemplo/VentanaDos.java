@@ -27,8 +27,8 @@ public class VentanaDos extends JFrame {
         panel3.setBackground(Color.green);
         panel4.setBackground(Color.gray);
 
-        etiqueta new JLabel("Soy una etiqueta");
-        boton new JButton("Soy un boton");
+        //etiqueta new JLabel("Soy una etiqueta");
+        //boton new JButton("Soy un boton");
 
 
 

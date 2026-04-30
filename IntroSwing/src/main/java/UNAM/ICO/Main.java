@@ -7,7 +7,7 @@ import UNAM.ICO.PrimerEjemplo.VentanaSwing;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        //VentanaSwing ventanaSwing = new VentanaSwing();
-        VentanaDos ventanaDos = new VentanaDos();
+        VentanaSwing ventanaSwing = new VentanaSwing();
+        //VentanaDos ventanaDos = new VentanaDos();
     }
 }

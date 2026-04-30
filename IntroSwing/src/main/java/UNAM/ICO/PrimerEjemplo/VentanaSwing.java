@@ -15,19 +15,27 @@ public class VentanaSwing extends JFrame {
 
     public VentanaSwing() {
         super("Mi primer ventana Swing");
+        this.getContentPane().setLayout(new GridLayout(3,3));
         etiqueta = new JLabel("Dame un numero");
-
         entrada = new JTextField(10);
         boton = new JButton("Enviar");
-        boton.setForeground(new Color(104,184,237));
+        boton.setForeground(new Color(0,0,0));
+        boton.setBackground(new Color(222,184,135));
+
+        boton.setOpaque(true);         //Background on
+        boton.setBorderPainted(false);
+
         boton.setSize(100,100);
+
+        etiqueta.setForeground(new Color(224,42,42));
+
+        etiqueta.setOpaque(true);
 
         this.getContentPane().repaint();
 
-        getContentPane().setLayout(new FlowLayout());
-        getContentPane().add(etiqueta);
-        getContentPane().add(entrada);
-        getContentPane().add(boton);
+        getContentPane().add(etiqueta,0);
+        getContentPane().add(entrada,1);
+        getContentPane().add(boton,2);
         getContentPane().repaint();
         this.pack();
         setSize(600,400);
