@@ -15,6 +15,8 @@ public class VentanaDos extends JFrame {
 
     public VentanaDos(){
         super("Mi segunda ventana Swing");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         setSize(800,600);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -24,6 +26,9 @@ public class VentanaDos extends JFrame {
         panel2 = new JPanel();
         panel3 = new JPanel();
         panel4 = new JPanel();
+        combo = new JComboBox<>();
+
+
         panel1.setBackground(new Color(22,32,104));
         panel2.setBackground(new Color(0,0,0));
         panel3.setBackground(new Color(34,55,78));
@@ -31,6 +36,9 @@ public class VentanaDos extends JFrame {
 
         etiqueta = new JLabel("Soy una etiqueta");
         boton = new JButton("Soy un boton");
+panel1.add(etiqueta);
+panel2.add(boton);
+panel3.add(combo);
 
 
         getContentPane().add(panel1,0);
