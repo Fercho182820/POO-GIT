@@ -18,6 +18,8 @@ public class VentanaSwing extends JFrame {
         this.getContentPane().setLayout(new GridLayout(3,3));
         etiqueta = new JLabel("Dame un numero");
         entrada = new JTextField(10);
+        entrada.setBackground(new Color(245,235,215));
+        entrada.setOpaque(true);
         boton = new JButton("Enviar");
         boton.setForeground(new Color(0,0,0));
         boton.setBackground(new Color(222,184,135));
@@ -27,7 +29,8 @@ public class VentanaSwing extends JFrame {
 
         boton.setSize(100,100);
 
-        etiqueta.setForeground(new Color(224,42,42));
+        etiqueta.setForeground(new Color(0,0,0));
+        etiqueta.setBackground(new Color(222,184,135));
 
         etiqueta.setOpaque(true);
 
