@@ -37,14 +37,55 @@ public class VentanaPrincipal extends JFrame {
         this.getContentPane().add(pnl1,0);
         this.getContentPane().add(pnl2,1);
 
-
-
         setSize(800,600);
         setVisible(true);
-
-
     }
 
+    public JPanel getPnl1() {
+        return pnl1;
+    }
 
+    public void setPnl1(JPanel pnl1) {
+        this.pnl1 = pnl1;
+    }
 
+    public JPanel getPnl2() {
+        return pnl2;
+    }
+
+    public void setPnl2(JPanel pnl2) {
+        this.pnl2 = pnl2;
+    }
+
+    public JLabel getLblNombre() {
+        return lblNombre;
+    }
+
+    public void setLblNombre(JLabel lblNombre) {
+        this.lblNombre = lblNombre;
+    }
+
+    public JTextField getTxtNombre() {
+        return txtNombre;
+    }
+
+    public void setTxtNombre(JTextField txtNombre) {
+        this.txtNombre = txtNombre;
+    }
+
+    public JButton getBtnSaludar() {
+        return btnSaludar;
+    }
+
+    public void setBtnSaludar(JButton btnSaludar) {
+        this.btnSaludar = btnSaludar;
+    }
+
+    public JLabel getLblSalida() {
+        return lblSalida;
+    }
+
+    public void setLblSalida(JLabel lblSalida) {
+        this.lblSalida = lblSalida;
+    }
 }

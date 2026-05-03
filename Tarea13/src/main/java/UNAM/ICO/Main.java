@@ -1,5 +1,6 @@
 package UNAM.ICO;
 
+import UNAM.ICO.controller.ControladorPrincipal;
 import UNAM.ICO.view.VentanaPrincipal;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -7,6 +8,8 @@ import UNAM.ICO.view.VentanaPrincipal;
 public class Main {
     static void main() {
         VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
+        ControladorPrincipal controlador = new ControladorPrincipal(ventanaPrincipal);
 
     }
+
 }
