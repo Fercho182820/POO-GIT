@@ -1,6 +1,7 @@
 package UNAM.ICO.controller;
 
 import UNAM.ICO.view.VentanaPassword;
+import UNAM.ICO.view.VentanaPrincipal;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -64,12 +65,17 @@ public class ControladorPassword implements MouseListener, KeyListener {
 
     }
     private void validarAcceso(){
-        // Ejemplo de la lógica dentro del controlador
+        //LOGICA ACCESO
         String usuario = vista.getTxtUsername().getText();
         String password = vista.getTxtPassword().getText();
 
-        if (usuario.equals("Ari") && password.equals("220426")) {
+        if (usuario.equals("Fer") && password.equals("220426")) {
             JOptionPane.showMessageDialog(vista, "¡Login Exitoso!");
+
+            VentanaPrincipal inicio = new VentanaPrincipal();
+            vista.dispose();
+            inicio.setVisible(true);
+
         } else {
             JOptionPane.showMessageDialog(vista, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
         }

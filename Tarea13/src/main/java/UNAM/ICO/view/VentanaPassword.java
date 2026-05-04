@@ -9,18 +9,18 @@ public class VentanaPassword extends JFrame {
     private JLabel lblUsername;
     private JTextField txtUsername;
     private JLabel lblPassword;
-    private JTextField txtPassword;
+    private JPasswordField txtPassword;
     private JButton btnLogin;
 
     public VentanaPassword(){
-        super("GALERIA");
+        super("INICIO DE SESION");
 
         //INICIAR CUADRICULA
         GridBagLayout gridBagLayout = new GridBagLayout();
         GridBagConstraints c = new GridBagConstraints();
         //DECLARAR PANELES
         pnl = new JPanel();
-        pnl.setBackground(new Color(38, 107, 148));
+        pnl.setBackground(new Color(255, 236, 193));
         pnl.setLayout(gridBagLayout);
         //DECLARAR/AGREGAR/ASIGNAR COMPONENTES
         lblUsername = new JLabel("USERNAME");
@@ -38,7 +38,7 @@ public class VentanaPassword extends JFrame {
         c.gridy=1;
         pnl.add(lblPassword,c);
 
-        txtPassword = new JTextField(12);
+        txtPassword = new JPasswordField(12);
         c.gridx=1;
         c.gridy=1;
         pnl.add(txtPassword,c);
@@ -95,7 +95,7 @@ public class VentanaPassword extends JFrame {
         return txtPassword;
     }
 
-    public void setTxtPassword(JTextField txtPassword) {
+    public void setTxtPassword(JPasswordField txtPassword) {
         this.txtPassword = txtPassword;
     }
 

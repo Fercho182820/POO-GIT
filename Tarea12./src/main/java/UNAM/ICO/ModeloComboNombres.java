@@ -1,8 +1,8 @@
-package UNAM.ICO.PrimerEjemplo;
+package UNAM.ICO;
 
-import javax.swing.*;
-import javax.swing.event.ListDataListener;
 import java.util.ArrayList;
+import javax.swing.ComboBoxModel;
+import javax.swing.event.ListDataListener;
 
 public class ModeloComboNombres implements ComboBoxModel {
     private ArrayList<String> nombres;
@@ -13,41 +13,32 @@ public class ModeloComboNombres implements ComboBoxModel {
     }
 
     public ArrayList<String> getNombres() {
-        return nombres;
+        return this.nombres;
     }
 
     public void setNombres(ArrayList<String> nombres) {
         this.nombres = nombres;
     }
 
-    @Override
     public void setSelectedItem(Object anItem) {
-        selectedItem = (String) anItem;
-
+        this.selectedItem = (String)anItem;
     }
 
-    @Override
     public Object getSelectedItem() {
-        return selectedItem;
+        return this.selectedItem;
     }
 
-    @Override
     public int getSize() {
-        return nombres.size();
+        return this.nombres.size();
     }
 
-    @Override
     public Object getElementAt(int index) {
-        return nombres.get(index);
+        return this.nombres.get(index);
     }
 
-    @Override
     public void addListDataListener(ListDataListener l) {
-
     }
 
-    @Override
     public void removeListDataListener(ListDataListener l) {
-
     }
 }
