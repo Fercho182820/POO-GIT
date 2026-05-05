@@ -3,8 +3,9 @@ package UNAM.ICO.view;
 import javax.swing.*;
 import java.awt.*;
 
-public class VentanaInicio extends JFrame {
+public class VentanaAlternativa extends JFrame {
     private JPanel pnl;
+    private JPanel pnl2;
     private JLabel lblNombre;
     private JTextField txtNombre;
     private JLabel lblApellidoP;
@@ -13,22 +14,26 @@ public class VentanaInicio extends JFrame {
     private JTextField txtApellidoM;
     private JButton btnDatos;
 
-    public VentanaInicio (){
+    public VentanaAlternativa (){
         super("FORMULARIO");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //CUADRICULA
         GridBagLayout gridBagLayout = new GridBagLayout();
-        GridBagConstraints c = new GridBagConstraints();
         //DECLARAR PANEL
-        pnl = new JPanel();
-        pnl.setBackground(new Color(89, 32, 50));
-        pnl.setLayout(gridBagLayout);
+        pnl = new JPanel(new GridBagLayout());
+        pnl.setBackground(new Color(191, 136, 4));
+
+        pnl2 = new JPanel(new GridBagLayout());
+        pnl2.setBackground(new Color(138, 98, 0));
+
+        GridBagConstraints c = new GridBagConstraints();
+
         //DECLARAR COMPONENTES
         lblNombre = new JLabel("NOMBRE: ");
         c.gridx = 0;
         c.gridy = 0;
-        pnl.add(lblNombre,c);
+        pnl2.add(lblNombre,c);
 
         txtNombre = new JTextField(12);
         c.gridx = 1;
@@ -38,7 +43,7 @@ public class VentanaInicio extends JFrame {
         lblApellidoP = new JLabel("APELLIDO PATERNO: ");
         c.gridx = 0;
         c.gridy = 1;
-        pnl.add(lblApellidoP,c);
+        pnl2.add(lblApellidoP,c);
 
         txtApellidoP = new JTextField(12);
         c.gridx = 1;
@@ -48,23 +53,23 @@ public class VentanaInicio extends JFrame {
         lblApellidoM = new JLabel("APELLIDO MATERNO: ");
         c.gridx = 0;
         c.gridy = 2;
-        pnl.add(lblApellidoM,c);
+        pnl2.add(lblApellidoM,c);
 
         txtApellidoM = new JTextField(12);
         c.gridx = 1;
         c.gridy = 2;
         pnl.add(txtApellidoM,c);
 
-        btnDatos = new JButton("SUBIR DATOS");
+        btnDatos = new JButton("REGISTRO");
         c.gridx = 1;
         c.gridy = 3;
         pnl.add(btnDatos,c);
 
 
-
+        this.add(pnl2);
         this.add(pnl);
         //DECLARAR PANEL AL FRAME
-        this.getContentPane().add(pnl,0);
+        this.setLayout(new GridLayout(1, 2));
         //TAMAÑO Y VISIBILIDAD
         setSize(800,600);
         setVisible(true);
@@ -139,3 +144,4 @@ public class VentanaInicio extends JFrame {
         this.btnDatos = btnDatos;
     }
 }
+

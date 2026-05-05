@@ -1,5 +1,6 @@
 package UNAM.ICO.controller;
 
+import UNAM.ICO.view.VentanaInicio;
 import UNAM.ICO.view.VentanaPassword;
 import UNAM.ICO.view.VentanaPrincipal;
 
@@ -72,7 +73,7 @@ public class ControladorPassword implements MouseListener, KeyListener {
         if (usuario.equals("Fer") && password.equals("220426")) {
             JOptionPane.showMessageDialog(vista, "¡Login Exitoso!");
 
-            VentanaPrincipal inicio = new VentanaPrincipal();
+            VentanaInicio inicio = new VentanaInicio();
             vista.dispose();
             inicio.setVisible(true);
 
