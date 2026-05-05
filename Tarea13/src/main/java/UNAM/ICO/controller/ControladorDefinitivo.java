@@ -1,28 +1,28 @@
 package UNAM.ICO.controller;
 
-import UNAM.ICO.view.VentanaInicio;
+import UNAM.ICO.view.VentanaDefinitiva;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class ControladorInicio implements MouseListener {
+public class ControladorDefinitivo implements MouseListener {
 
-    private VentanaInicio view;
+    private VentanaDefinitiva view;
 
-    public ControladorInicio(VentanaInicio vista){
+    public  ControladorDefinitivo(VentanaDefinitiva vista) {
         this.view = vista;
         this.view.getBtnDatos().addMouseListener(this);
+
     }
-
-
     @Override
     public void mouseClicked(MouseEvent e) {
 
         if(e.getSource() == this.view.getBtnDatos()){
             System.out.println("DATOS GUARDADOS");
-            this.view.getBtnDatos().setText("DATOS ACTUALIZADOS");
+            this.view.getBtnDatos().setText("REGISTRO EXITOSO");
 
         }
+
     }
 
     @Override
@@ -45,4 +45,3 @@ public class ControladorInicio implements MouseListener {
 
     }
 }
-
