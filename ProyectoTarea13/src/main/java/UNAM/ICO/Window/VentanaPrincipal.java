@@ -15,7 +15,10 @@ public class VentanaPrincipal extends JFrame {
     private JTextField txtMarca;
     private JLabel lblModelo;
     private JTextField txtModelo;
+    private JLabel lblPrecio;
+    private JTextField txtPrecio;
     private JButton btnAgregarPhone;
+    private JTable tblPhone;
 
     public VentanaPrincipal (){
         super("DEMO MVC INTRO");
@@ -24,7 +27,7 @@ public class VentanaPrincipal extends JFrame {
         //Declarar los paneles
         pnl1 = new JPanel(new GridBagLayout());
         pnl1.setBackground(new Color(252, 204, 114));
-        pnl2 = new JPanel();
+        pnl2 = new JPanel(new GridBagLayout());
         pnl2.setBackground(new Color(242, 191, 99));
         //Declarar los componentes
         GridBagLayout gridBagLayout = new GridBagLayout();
@@ -50,6 +53,8 @@ public class VentanaPrincipal extends JFrame {
 //        c.gridy = 0;
 //        pnl1.add(lblSalida,c);
 
+        //PANEL1
+
         lblMarca = new JLabel("Marca");
         c.gridx = 0;
         c.gridy = 1;
@@ -70,10 +75,27 @@ public class VentanaPrincipal extends JFrame {
         c.gridy = 2;
         pnl1.add(txtModelo,c);
 
-        btnAgregarPhone = new JButton("AGREGAR");
+        lblPrecio = new JLabel("Precio");
+        c.gridx = 0;
+        c.gridy = 3;
+        pnl1.add(lblPrecio,c);
+
+        txtPrecio = new JTextField(12);
         c.gridx = 1;
         c.gridy = 3;
+        pnl1.add(txtPrecio,c);
+
+        btnAgregarPhone = new JButton("AGREGAR");
+        c.gridx = 1;
+        c.gridy = 4;
         pnl1.add(btnAgregarPhone,c);
+
+        //PANEL 2
+        tblPhone = new JTable();
+        c.gridx = 0;
+        c.gridy = 0;
+        pnl2.add(tblPhone,c);
+
 
         //Agregar el panel 1 y 2 al frame
         this.getContentPane().add(pnl1,0);
@@ -129,6 +151,70 @@ public class VentanaPrincipal extends JFrame {
 
     public void setLblSalida(JLabel lblSalida) {
         this.lblSalida = lblSalida;
+    }
+
+    public JLabel getLblMarca() {
+        return lblMarca;
+    }
+
+    public void setLblMarca(JLabel lblMarca) {
+        this.lblMarca = lblMarca;
+    }
+
+    public JTextField getTxtMarca() {
+        return txtMarca;
+    }
+
+    public void setTxtMarca(JTextField txtMarca) {
+        this.txtMarca = txtMarca;
+    }
+
+    public JLabel getLblModelo() {
+        return lblModelo;
+    }
+
+    public void setLblModelo(JLabel lblModelo) {
+        this.lblModelo = lblModelo;
+    }
+
+    public JTextField getTxtModelo() {
+        return txtModelo;
+    }
+
+    public void setTxtModelo(JTextField txtModelo) {
+        this.txtModelo = txtModelo;
+    }
+
+    public JLabel getLblPrecio() {
+        return lblPrecio;
+    }
+
+    public void setLblPrecio(JLabel lblPrecio) {
+        this.lblPrecio = lblPrecio;
+    }
+
+    public JTextField getTxtPrecio() {
+        return txtPrecio;
+    }
+
+    public void setTxtPrecio(JTextField txtPrecio) {
+        this.txtPrecio = txtPrecio;
+    }
+
+    public JButton getBtnAgregarPhone() {
+        return btnAgregarPhone;
+    }
+
+    public void setBtnAgregarPhone(JButton btnAgregarPhone) {
+        this.btnAgregarPhone = btnAgregarPhone;
+    }
+
+    public JTable getTblPhone() {
+        return tblPhone;
+    }
+
+    public void setTblPhone(JTable tblPhone) {
+        this.tblPhone = tblPhone;
     }
 }
 

@@ -1,18 +1,29 @@
 package UNAM.ICO.Controller;
 
+import UNAM.ICO.Model.ModeloTablaPhone;
+import UNAM.ICO.Model.SmartPhone;
 import UNAM.ICO.Window.VentanaPrincipal;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 
 public class ControladorPrincipal implements MouseListener {
 
     private VentanaPrincipal view;
+    private ModeloTablaPhone modelo;
 
     public ControladorPrincipal(VentanaPrincipal vista){
         this.view = vista;
         this.view.getBtnSaludar().addMouseListener(this);
         this.view.getLblNombre().addMouseListener(this);
+        ArrayList<SmartPhone> tels = new ArrayList<>();
+        tels.add(new SmartPhone("Apple", "Iphone 15", 17000.3f));
+        tels.add(new SmartPhone("Samsung","Galaxy 5",7000.3f));
+        modelo = new ModeloTablaPhone(tels);
+        this.view.getTblPhone().setModel(modelo);
+        this.view.getTblPhone().updateUI();
+
     }
 
 
