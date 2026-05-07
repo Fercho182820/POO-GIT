@@ -18,6 +18,7 @@ public class VentanaPrincipal extends JFrame {
     private JLabel lblPrecio;
     private JTextField txtPrecio;
     private JButton btnAgregarPhone;
+    private JScrollPane scrollPane;
     private JTable tblPhone;
 
     public VentanaPrincipal (){
@@ -27,7 +28,7 @@ public class VentanaPrincipal extends JFrame {
         //Declarar los paneles
         pnl1 = new JPanel(new GridBagLayout());
         pnl1.setBackground(new Color(252, 204, 114));
-        pnl2 = new JPanel(new GridBagLayout());
+        pnl2 = new JPanel(new FlowLayout());
         pnl2.setBackground(new Color(242, 191, 99));
         //Declarar los componentes
         GridBagLayout gridBagLayout = new GridBagLayout();
@@ -91,10 +92,11 @@ public class VentanaPrincipal extends JFrame {
         pnl1.add(btnAgregarPhone,c);
 
         //PANEL 2
+        scrollPane = new JScrollPane();
+        scrollPane.setPreferredSize(new Dimension(400,200));
         tblPhone = new JTable();
-        c.gridx = 0;
-        c.gridy = 0;
-        pnl2.add(tblPhone,c);
+        scrollPane.setViewportView(tblPhone);
+        pnl2.add(scrollPane, BorderLayout.CENTER);
 
 
         //Agregar el panel 1 y 2 al frame

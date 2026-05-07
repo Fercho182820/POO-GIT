@@ -15,8 +15,8 @@ public class ControladorPrincipal implements MouseListener {
 
     public ControladorPrincipal(VentanaPrincipal vista){
         this.view = vista;
-        this.view.getBtnSaludar().addMouseListener(this);
-        this.view.getLblNombre().addMouseListener(this);
+        //this.view.getBtnSaludar().addMouseListener(this);
+        //this.view.getLblNombre().addMouseListener(this);
         ArrayList<SmartPhone> tels = new ArrayList<>();
         tels.add(new SmartPhone("Apple", "Iphone 15", 17000.3f));
         tels.add(new SmartPhone("Samsung","Galaxy 5",7000.3f));
