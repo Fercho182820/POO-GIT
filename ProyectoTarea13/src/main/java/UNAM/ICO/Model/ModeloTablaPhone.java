@@ -92,4 +92,12 @@ public class ModeloTablaPhone implements TableModel {
     public void removeTableModelListener(TableModelListener l) {
 
     }
+
+    public void agregarTelefono( SmartPhone tel){
+        this.data.add(tel);
+
+    }
+    public SmartPhone getTelefono (int index){
+        return this.data.get(index);
+    }
 }

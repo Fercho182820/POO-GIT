@@ -218,5 +218,14 @@ public class VentanaPrincipal extends JFrame {
     public void setTblPhone(JTable tblPhone) {
         this.tblPhone = tblPhone;
     }
+
+    public void limpiar(){
+        txtMarca.setText("");
+        txtModelo.setText("");
+        txtPrecio.setText("");
+    }
+    public boolean validar(){
+        return !txtMarca.getText().isEmpty() && !txtModelo.getText().isEmpty() && !txtPrecio.getText().isEmpty();
+    }
 }
 
